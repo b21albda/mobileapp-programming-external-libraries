@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             String url = input.getText().toString();
 
             if (!url.isEmpty())
-                Picasso.get().load(url).into(img);
+                Picasso.get().load(url).error(R.drawable.ic_error).into(img);
         });
     }
 }
