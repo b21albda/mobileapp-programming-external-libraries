@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             String url = input.getText().toString();
 
             if (!url.isEmpty())
-                Picasso.get().load(url).error(R.drawable.ic_error).into(img);
+                Glide.with(this).load(url).into(img);
         });
     }
 }
